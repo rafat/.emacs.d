@@ -35,3 +35,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'upcase-region 'disabled nil)
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+(load "~/.emacs.d/haskell-mode/haskell-site-file")
+   (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+ ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+   (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+   ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
